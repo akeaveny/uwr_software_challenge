@@ -3,7 +3,7 @@
 #include "turtlesim/Pose.h"	
 #include "geometry_msgs/Twist.h"
 
-#include "software_challenge/TwoTurtlesDist.h"
+#include "uwr_software_challenge/TwoTurtlesDist.h"
 
 // std lib
 #include <cstdlib>
@@ -49,13 +49,13 @@ int main(int argc, char **argv) {
     ros::Subscriber CurPose1_sub = nh.subscribe("/stationary_turtle/pose", 10, StationaryPoseCallback);
     ros::Subscriber MovingPose_sub = nh.subscribe("/moving_turtle/pose", 10, MovingPoseCallback);
 
-    ros::Publisher pose_publisher = nh.advertise<software_challenge::TwoTurtlesDist>("two_turtles_pose", 1);
+    ros::Publisher pose_publisher = nh.advertise<uwr_software_challenge::TwoTurtlesDist>("two_turtles_pose", 1);
 
     ros::Rate loop_rate(30);
 
     while (ros::ok()) {
         
-        software_challenge::TwoTurtlesDist msg;
+        uwr_software_challenge::TwoTurtlesDist msg;
         msg.distance_x = MovingPose.x - StationaryPose.x;
         msg.distance_y = MovingPose.y - StationaryPose.y;
         msg.distance_rel = getDistance(StationaryPose.x, StationaryPose.y, MovingPose.x, MovingPose.y);
