@@ -1,0 +1,10 @@
+uwr_software_challenge:
+        spawn_turtles:
+                turtles:
+                       - name: "stationary_turtle"
+                         x: 5.0
+                         y: 5.0
+
+                       - name: "moving_turtle"
+                         x: 10.0
+                         y: 10.0

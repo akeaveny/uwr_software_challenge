@@ -149,7 +149,7 @@ include_directories(
 # add_executable(turtle_node src/turtle_node.cpp)
 add_executable(spawn_turtles src/spawn_turtles.cpp)
 add_executable(pose_publisher src/pose_publisher.cpp)
-add_executable(move_turtles src/move_turtles_server.cpp)
+# add_executable(move_turtles src/move_turtles_server.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -167,7 +167,7 @@ add_executable(move_turtles src/move_turtles_server.cpp)
 # )
 target_link_libraries(spawn_turtles ${catkin_LIBRARIES})
 target_link_libraries(pose_publisher ${catkin_LIBRARIES})
-target_link_libraries(move_turtles ${catkin_LIBRARIES})
+# target_link_libraries(move_turtles ${catkin_LIBRARIES})
 
 #############
 ## Install ##

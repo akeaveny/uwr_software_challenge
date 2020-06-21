@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+	<rosparam command="load" file="$(find uwr_software_challenge)/config/turtles_param.yaml" />
+
+	<!-- <arg name="turtle1_name_"			default="stationary_turtle"/>
+	<arg name="turtle1_x_"				default="5"/>
+	<arg name="turtle1_y_"				default="5"/> -->
+
+	<node pkg="uwr_software_challenge" name="spawn_turtles" type="spawn_turtles" ns="uwr_software_challenge"
+			output="screen">
+
+		<!-- <param name="turtle1_name_" 			   value="$(arg turtle1_name_)"/>
+		<param name="turtle1_x_" 				   value="$(arg turtle1_x_)"/>
+		<param name="turtle1_y_" 				   value="$(arg turtle1_y_)"/> -->
+
+	</node>
+
+</launch>

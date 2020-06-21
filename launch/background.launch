@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+
+    <rosparam command="load" file="$(find uwr_software_challenge)/config/background_param.yaml" />
+
+    <node pkg="turtlesim" name="sim" type="turtlesim_node" ns="uwr_software_challenge">
+
+        <param name="~background_b" value="128"/>
+        
+        <!-- <rosparam param="/uwr_software_challenge/sim/background_b" subst_value=256/> -->
+        <!-- <rosparam param="/uwr_software_challenge/sim/background_b">
+        256
+        </rosparam> -->
+
+    </node>
+
+</launch>
