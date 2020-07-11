@@ -75,5 +75,5 @@ int main(int argc, char **argv) {
 
     // ====== spawn ====== 
     // spawnturtle(turtle1_x_, turtle1_y_, 0, turtle1_name_);
-    spawnturtle(25, 10, 0, "moving_turtle");
+    // spawnturtle(25, 10, 0, "moving_turtle");
 }
